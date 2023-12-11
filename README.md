@@ -91,5 +91,3 @@ python main.py
 ```
 
 A manual testing loop is also included to get predictions on custom user-inputted news articles.
-
-Let me know if you need any clarification or have additional suggestions for improving the README!
