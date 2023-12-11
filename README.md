@@ -82,15 +82,15 @@ The project trains an ensemble of different ML models on the fake news classific
 
 Using an ensemble approach provides several key advantages:
 
-**1. Improved Accuracy**
+### **1. Improved Accuracy**
 
 By combining multiple models together, the overall accuracy is improved compared to any individual model. Each model can capture different nuances in the data.
 
-**2. Overcome Individual Weaknesses** 
+### **2. Overcome Individual Weaknesses** 
 
 Every model has its own limitations. For example, decision trees can overfit easily. By combining with other models like random forests and boosting algorithms which reduce overfitting, we can overcome these individual weaknesses.
 
-**3. Robustness**
+### **3. Robustness**
 
 Ensembling multiple models reduces variance and makes the overall predictions more robust. For example, if a new data point causes one model to fail, the other models can compensate and still provide the right prediction.  
 
