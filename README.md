@@ -72,15 +72,33 @@ The main preprocessing steps are:
 
 ## Models
 
-The following ML models are trained and evaluated:
+The project trains an ensemble of different ML models on the fake news classification task, including:
 
 - Logistic Regression
 - Decision Tree
 - Random Forest
 - Gradient Boosting
-- SVM 
+- SVM with Linear Kernel
 
-The models are serialized to .sav files using Pickle.
+Using an ensemble approach provides several key advantages:
+
+**1. Improved Accuracy**
+
+By combining multiple models together, the overall accuracy is improved compared to any individual model. Each model can capture different nuances in the data.
+
+**2. Overcome Individual Weaknesses** 
+
+Every model has its own limitations. For example, decision trees can overfit easily. By combining with other models like random forests and boosting algorithms which reduce overfitting, we can overcome these individual weaknesses.
+
+**3. Robustness**
+
+Ensembling multiple models reduces variance and makes the overall predictions more robust. For example, if a new data point causes one model to fail, the other models can compensate and still provide the right prediction.  
+
+The models are combined using simple majority voting - if 3 or more models predict a news article as Fake, we classify it as such. The threshold can be adjusted to tradeoff between precision and recall.
+
+By training an ensemble of diverse ML models instead of relying on any single technique, our fake news classifier is more accurate, robust and resilient to new/unseen data. The ultimate goal is to maximize detection rates so harmful fake content can be effectively moderated.
+
+The models are serialized to `.sav` files using Pickle to not train the model every single time we run the program.
 
 ## Usage
 
